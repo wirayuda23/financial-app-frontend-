@@ -10,6 +10,7 @@ import {
   Thead,
   Tr,
   Container,
+  DarkMode,
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import CatatKeuangan from "./components/CatatKeuangan";
@@ -19,9 +20,11 @@ import TabelKeuangan from "./components/TabelKeuangan";
 
 const Home: NextPage = () => {
   return (
-    <Container maxW="container.sm" p={12}>
-      <TabelKeuangan />
-    </Container>
+    <DarkMode>
+      <Container maxW="container.sm" p={12}>
+        <TabelKeuangan />
+      </Container>
+    </DarkMode>
   );
 };
 
