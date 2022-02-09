@@ -20,11 +20,9 @@ import TabelKeuangan from "./components/TabelKeuangan";
 
 const Home: NextPage = () => {
   return (
-    <DarkMode>
-      <Container maxW="container.sm" p={12}>
-        <TabelKeuangan />
-      </Container>
-    </DarkMode>
+    <Container maxW="container.sm" p={12}>
+      <TabelKeuangan />
+    </Container>
   );
 };
 
