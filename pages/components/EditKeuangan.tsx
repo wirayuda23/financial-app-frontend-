@@ -14,7 +14,7 @@ export default function EditKeuangan({ data }: { data: number }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button mr={3} colorScheme="green" onClick={onOpen}>
+      <Button mr={3} colorScheme="green" onClick={onOpen} mb={3} width={90}>
         Edit
       </Button>
       <Modal

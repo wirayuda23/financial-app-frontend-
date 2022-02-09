@@ -33,7 +33,7 @@ export default function FormCatat() {
       type: jenis,
     };
     await axios
-      .post("http://127.0.0.1:8000/api/transaction", body)
+      .post("https://akunapi.herokuapp.com/api/transaction", body)
       .then(() => window.location.reload());
   };
 

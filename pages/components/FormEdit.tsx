@@ -26,7 +26,9 @@ export default function FormEdit({ id }: { id: number }) {
   }, []);
 
   const fetchData = async () => {
-    const res = await axios.get("http://127.0.0.1:8000/api/transaction/" + id);
+    const res = await axios.get(
+      "https://akunapi.herokuapp.com/api/transaction/" + id
+    );
     const akun = await res.data;
     setKeterangan(akun.data.title);
     setJumlah(akun.data.amount);
@@ -41,7 +43,7 @@ export default function FormEdit({ id }: { id: number }) {
       type: jenis,
     };
     await axios
-      .put("http://127.0.0.1:8000/api/transaction/" + id, body)
+      .put("https://akunapi.herokuapp.com/api/transaction/" + id, body)
       .then(() => window.location.reload());
   };
 

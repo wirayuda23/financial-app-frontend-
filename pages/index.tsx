@@ -9,6 +9,7 @@ import {
   Th,
   Thead,
   Tr,
+  Container,
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import CatatKeuangan from "./components/CatatKeuangan";
@@ -17,7 +18,11 @@ import EditKeuangan from "./components/EditKeuangan";
 import TabelKeuangan from "./components/TabelKeuangan";
 
 const Home: NextPage = () => {
-  return <TabelKeuangan />;
+  return (
+    <Container maxW="container.sm" p={12}>
+      <TabelKeuangan />
+    </Container>
+  );
 };
 
 export default Home;

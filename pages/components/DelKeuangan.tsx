@@ -14,12 +14,12 @@ export default function DelKeuangan({ id }: { id: number }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const Delete = async () => {
     await axios
-      .delete("http://127.0.0.1:8000/api/transaction/" + id)
+      .delete("https://akunapi.herokuapp.com/api/transaction/" + id)
       .then(() => window.location.reload());
   };
   return (
     <>
-      <Button colorScheme="red" onClick={onOpen}>
+      <Button colorScheme="red" onClick={onOpen} width={90}>
         Hapus
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
